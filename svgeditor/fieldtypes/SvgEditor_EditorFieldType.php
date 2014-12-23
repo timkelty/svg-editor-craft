@@ -16,13 +16,13 @@ class SvgEditor_EditorFieldType extends BaseFieldType
 
 		switch ($settings->editorPlugin) {
 			case 'svg-edit':
-				$iframeSrc = UrlHelper::getResourceUrl('svgeditor/svg-edit/svg-editor.html');
-				craft()->templates->includeJsResource('svgeditor/svg-edit/embedapi.js');
+				$iframeSrc = UrlHelper::getResourceUrl('svgeditor/editors/svg-edit/svg-editor.html');
+				craft()->templates->includeJsResource('svgeditor/editors/svg-edit/embedapi.js');
 				break;
 
 			default:
-				$iframeSrc = UrlHelper::getResourceUrl('svgeditor/method-draw/index.html');
-				craft()->templates->includeJsResource('svgeditor/method-draw/src/embedapi.js');
+				$iframeSrc = UrlHelper::getResourceUrl('svgeditor/editors/method-draw/index.html');
+				craft()->templates->includeJsResource('svgeditor/editors/method-draw/src/embedapi.js');
 				break;
 		}
 
