@@ -21,8 +21,8 @@ class SvgEditor_EditorFieldType extends BaseFieldType
 				break;
 
 			default:
-				$iframeSrc = UrlHelper::getResourceUrl('svgeditor/editors/method-draw/index.html');
-				craft()->templates->includeJsResource('svgeditor/editors/method-draw/src/embedapi.js');
+				$iframeSrc = UrlHelper::getResourceUrl(sprintf('svgeditor/editors/%s/index.html', $settings->editorPlugin));
+				craft()->templates->includeJsResource(sprintf('svgeditor/editors/%s/src/embedapi.js', $settings->editorPlugin));
 				break;
 		}
 
