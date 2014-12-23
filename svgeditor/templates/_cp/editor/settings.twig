@@ -1,0 +1,27 @@
+{% import "_includes/forms" as forms %}
+
+{% set instructions %}
+  More information about <a target="_blank" href="https://github.com/duopixel/Method-Draw">Method Draw</a> and <a target="_blank" href="https://code.google.com/p/svg-edit/">svg-edit</a>.
+{% endset %}
+{{ forms.selectField({
+  label: "Editor Plugin"|t,
+  id: 'editorPlugin',
+  name: 'editorPlugin',
+  value: settings.editorPlugin,
+  autofocus: true,
+  instructions: instructions,
+  first: true,
+  options: {
+    'method-draw': 'Method Draw',
+    'svg-edit': 'svg-edit'
+  }
+}) }}
+
+{{ forms.textField({
+  label: "Editor Height"|t,
+  id: 'editorHeight',
+  name: 'editorHeight',
+  value: settings.editorHeight,
+  instructions: 'The height of the editor in pixels.',
+  default: '800',
+}) }}
